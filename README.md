@@ -31,7 +31,7 @@ I wanted to build a homelab because I had the illusion to have my own personal s
         ┌────────────────────────────────────────────-┐
         │                  SRVlab (Proxmox)           │
         │  Ryzen 7 2700X · 48GB DDR4 · RTX 2060S (PT) │
-        │  1TB NVMe · 2TB HDD · APC UPS + NUT         │
+        │  2TB NVMe · 2TB HDD · APC UPS + NUT         │
         │                                             │
         │ ┌──────────┐  ┌──────────┐  ┌─────────────┐ │
         │ │ Windows VM│  │  OMV VM  │  │ Traefik LXC│ │
@@ -64,7 +64,7 @@ I wanted to build a homelab because I had the illusion to have my own personal s
 | Motherboard           | ASUS Prime X470-PRO                                                                                     |
 | GPU (passthrough)     | NVIDIA RTX 2060 Super                                                                                   |
 | GPU (spare/emergency) | AMD RX 470 (kept on hand for physical/emergency video output if the host ever needs a monitor attached) |
-| Storage (OS/VMs)      | 1TB NVMe M.2                                                                                            |
+| Storage (OS/VMs)      | 2TB NVMe M.2                                                                                            |
 | Storage (data)        | 2TB HDD (passed through raw to an OMV VM)                                                               |
 | UPS                   | APC Back-UPS XS 1000M, monitored via NUT                                                                |
 ### Raspberry Pi 4

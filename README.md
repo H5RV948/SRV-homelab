@@ -1,19 +1,19 @@
 # Homelab
 
-This is my first homelab and it is operated headlessly via proxmox web UI or SSH 
+This is my first homelab and it is operated headlessly via Proxmox web UI or SSH.
 
 ---
 
 ## Why I built this
-Initially I was pulled into the world of homelabs due to my experience dual booting windows and linux and then switching to using WSL to avoid issues with having Linux and Windows on the same drive. After doing some research in the different areas of cybersecurity, participating in CTFs and doing some modules in Tryhackme I started to get really curious about the world of cybersecurity and IT, this introducing me to the world of having your own home-server/homelab.
+Initially I was pulled into the world of homelabs due to my experience dual booting Windows and Linux and then switching to using WSL to avoid issues with having Linux and Windows on the same drive. After doing some research in the different areas of cybersecurity, participating in CTFs and doing some modules in TryHackMe I started to get really curious about the world of cybersecurity and IT, which introduced me to the world of having your own home-server/homelab.
 
-I wanted to build a homelab because I had the illusion to have my own personal server, to host my own services, to have multiple VM's to test new linux distros without the need of dual booting, having a testing environment for other projects or things I would want to learn. On top of this was that it would make me learn useful skills and knowledge that could be transfer into a field I was starting to fell really passionate about.
+I wanted to build a homelab because I was excited to have my own personal server, to host my own services, to have multiple VMs to test new Linux distros without the need of dual booting and to have a testing environment for other projects or things I would want to learn. On top of this, it would make me learn useful skills and knowledge that could be transferred into a field I was starting to feel really passionate about.
 ## What it's for
 - **Future Cybersecurity labs**: pentesting, malware analysis, purple team exercises
 - Isolated, disposable environments for testing tools and techniques
 - A GPU-accelerated Windows VM for gaming, streamed remotely
 - Self-hosted services 
-- Getting hands-on experience with virtualization, networking, and Linux systems administration by running real infrastructure instead of only watching videos on youtube about it
+- Getting hands-on experience with virtualization, networking, and Linux systems administration by running real infrastructure instead of only watching videos on YouTube about it
 ---
 
 ## Architecture
@@ -69,7 +69,7 @@ I wanted to build a homelab because I had the illusion to have my own personal s
 | UPS                   | APC Back-UPS XS 1000M, monitored via NUT                                                                |
 ### Raspberry Pi 4
 
-Hosts home assistand and helps with a Wake-on-LAN (WoL) relay for both the homelab and the main PC. It sits on the LAN and sends the magic packet locally when I trigger it remotely over Tailscale. Haven't found another use for it yet.
+Hosts Home Assistant and helps with a Wake-on-LAN (WoL) relay for both the homelab and the main PC. It sits on the LAN and sends the magic packet locally when I trigger it remotely over Tailscale. Haven't found another use for it yet.
 
 ---
 
@@ -97,7 +97,7 @@ Hosts home assistand and helps with a Wake-on-LAN (WoL) relay for both the homel
 ## Remote Access and Security
 ### SSH
 - OpenSSH with key-based auth
-- Leveraged by `~/.ssh/conf` and Tailscale Magic DNS feature to make it easier to connect to my devices
+- Uses `~/.ssh/config` and Tailscale Magic DNS feature to make it easier to connect to my devices
 ### Tailscale Mesh VPN
 - Encrypted access to every node without opening any ports on the router. Safer than port forwarding
 ### Reverse Proxy / TLS
@@ -124,11 +124,11 @@ Hosts home assistand and helps with a Wake-on-LAN (WoL) relay for both the homel
 - APC Back-UPS XS 1000M monitored via NUT in standalone mode directly on the Proxmox host, configured to trigger a graceful shutdown.
 - Integrated into Home Assistant for live battery/status monitoring.
 
-### Homeassistant
-- It replaced `Homepage` because I found Homeassistant more useful and flexible.
+### Home Assistant
+- It replaced `Homepage` because I found Home Assistant more useful and flexible.
 
 ---
-# Notes
+## Notes
 - The biggest gap is that all my access to the homelab depends on Tailscale.
 - UPS/NUT would sometimes fail to start after a power-loss reboot — fixed with a systemd override so it waits on the driver and retries.
 
